@@ -1,0 +1,15 @@
+image: node:16-buster
+
+tasks:
+  - init: npm install
+    command: npm run build
+
+ports:
+  - port: 8545
+    onOpen: open-preview
+
+vscode:
+  extensions:
+    - JuanBlanco.solidity
+    - esbenp.prettier-vscode
+
